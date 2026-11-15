@@ -1,0 +1,194 @@
+/* Iconos de fallback */
+:where([class^="ri-"])::before {
+    content: "\f3c2";
+}
+
+/* Hero Section con overlay rojo corporativo */
+.hero-section {
+    background-image: url('../img/segurproCCTV.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(17, 24, 39, 0.85) 0%, rgba(17, 24, 39, 0.7) 50%, rgba(227, 6, 19, 0.3) 100%);
+    z-index: 1;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Inputs y focus */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #E30613;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.custom-checkbox:hover input~.checkmark {
+    border-color: #cccccc;
+}
+
+.custom-checkbox input:checked~.checkmark {
+    background-color: #E30613;
+    border-color: #E30613;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-slide {
+    display: none;
+}
+
+.testimonial-slide.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Menú Móvil */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 60;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-menu nav {
+    padding: 1rem;
+}
+
+.mobile-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu nav ul li a {
+    display: block;
+    padding: 0.75rem 0;
+    font-size: 1.125rem;
+    color: #374151;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.mobile-menu nav ul li a:hover {
+    color: #E30613;
+}
+
+/* Animaciones de aparición al hacer scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botón de envío con estado */
+#submit-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+#submit-btn.success {
+    background-color: #10b981 !important;
+}
+
+#submit-btn.error {
+    background-color: #ef4444 !important;
+}
+
+/* Smooth scroll offset para header fijo */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}

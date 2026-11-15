@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEGURPRO SpA | Sistemas de Seguridad Integral e Ingeniería Electrónica</title>
+    <link rel="icon" href="./assets/img/segurprofavicon.png" type="image/png">
+    <meta name="description"
+        content="SEGURPRO SpA diseña, implementa y mantiene sistemas de seguridad electrónica y conectividad de alta gama. Planes de mantención para CCDD, CCTV, Cercos Eléctricos, Control de Acceso y más. Diagnóstico técnico gratuito en terreno.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E30613',
+                        secondary: '#B00510',
+                        dark: '#111827'
+                    },
+                    borderRadius: {
+                        'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px',
+                        'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px',
+                        'full': '9999px', 'button': '8px'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/script.js"></script>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- Header y Navegación -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="./assets/img/segurpro.jpg"
+                    alt="SEGURPRO Logo" class="h-12">
+            </a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#inicio" class="text-gray-700 hover:text-primary font-medium transition duration-200">Inicio</a>
+                <a href="#nosotros" class="text-gray-700 hover:text-primary font-medium transition duration-200">Nosotros</a>
+                <a href="#servicios" class="text-gray-700 hover:text-primary font-medium transition duration-200">Servicios</a>
+                <a href="#planes" class="text-gray-700 hover:text-primary font-medium transition duration-200">Planes CCDD</a>
+                <a href="#diagnostico" class="text-gray-700 hover:text-primary font-medium transition duration-200">Diagnóstico Gratis</a>
+                <a href="#contacto" class="bg-primary text-white px-5 py-2 rounded-button font-bold hover:bg-secondary transition duration-200 shadow-md">Cotizar Ahora</a>
+            </nav>
+            <!-- Botón hamburguesa visible -->
+            <button id="menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary">
+                <i class="ri-menu-line ri-2x"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section min-h-screen pt-20 flex items-center">
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="max-w-2xl text-white">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-white border border-primary text-sm font-bold mb-6 tracking-wide uppercase">
+                    Sistemas de Seguridad Integral e Ingeniería Electrónica
+                </span>
+                <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight">
+                    Soluciones tecnológicas <span class="text-primary">QUE PROTEGEN</span> lo que más importa
+                </h1>
+                <p class="text-xl mb-8 text-gray-200">
+                    En SEGURPRO SpA diseñamos, implementamos y mantenemos sistemas de seguridad y conectividad de alta gama, integrando tecnología de punta con personal certificado.
+                </p>
+
+                <!-- Badge Diagnóstico Gratuito -->
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 mb-8 inline-block">
+                    <p class="text-white font-bold text-lg">🎯 <span class="text-primary">DIAGNÓSTICO TÉCNICO GRATUITO</span> en terreno</p>
+                    <p class="text-gray-300 text-sm">Levantamientos y visitas técnicas sin costo</p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <a href="#contacto" class="bg-primary text-white px-8 py-4 rounded-button font-bold text-lg hover:bg-secondary transition duration-200 shadow-xl text-center">
+                        Solicitar Diagnóstico Gratis
+                    </a>
+                    <a href="https://wa.me/56965685556" target="_blank" class="bg-white text-gray-900 px-8 py-4 rounded-button font-bold text-lg hover:bg-gray-100 transition duration-200 shadow-xl flex items-center justify-center gap-2">
+                        <i class="ri-whatsapp-fill text-green-500 ri-xl"></i>
+                        WhatsApp
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap mt-12 gap-8 md:gap-12">
+                    <div class="text-center">
+                        <p class="text-4xl font-black">15+</p>
+                        <p class="text-sm mt-1 text-gray-300">Años de Experiencia</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-black">2,500+</p>
+                        <p class="text-sm mt-1 text-gray-300">Clientes Satisfechos</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-black">5,000+</p>
+                        <p class="text-sm mt-1 text-gray-300">Proyectos Realizados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por Qué Elegirnos -->
+    <section id="nosotros" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+                    <img src="./assets/img/segurproequipo.jpg"
+                        alt="Equipo profesional SEGURPRO"
+                        class="rounded-lg shadow-lg object-cover w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-primary font-bold tracking-wider uppercase text-sm">Nuestro Compromiso</span>
+                    <h2 class="text-4xl font-black mb-6 mt-2">¿Por Qué Elegir SEGURPRO?</h2>
+                    <p class="text-xl text-gray-600 mb-8">Entregamos soluciones confiables, innovadoras y eficientes que generan tranquilidad y continuidad operativa.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="ri-cpu-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Tecnología de Alto Nivel</h3>
+                                <p class="text-gray-600">Integramos tecnología de punta para entregar máxima protección y continuidad operativa.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="ri-user-star-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Personal Certificado</h3>
+                                <p class="text-gray-600">Nuestro equipo técnico cuenta con certificaciones internacionales y capacitación constante.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="ri-shield-check-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Servicio Integral</h3>
+                                <p class="text-gray-600">Desde el diseño hasta el mantenimiento preventivo y correctivo de todos sus sistemas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="ri-headphone-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Soporte y Asesoría 24/7</h3>
+                                <p class="text-gray-600">Estamos disponibles cuando más nos necesitas, con atención prioritaria ante emergencias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Principales (7 del folleto) -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm">Nuestro Portafolio</span>
+                <h2 class="text-4xl font-black mb-4 mt-2">Soluciones Integrales de Seguridad</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Ofrecemos soluciones integrales de seguridad electrónica adaptadas a las necesidades específicas de cada comunidad, empresa o institución.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1: CCTV -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-lg hover:bg-primary hover:text-white transition duration-300 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-white/20">
+                        <i class="ri-vidicon-fill ri-2x text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sistemas CCTV</h3>
+                    <p class="text-gray-600 hover:text-white transition duration-300">Circuitos cerrados de televisión con cámaras de alta resolución y analíticas inteligentes de video para detección proactiva de anomalías.</p>
+                </div>
+                <!-- Servicio 2: Cercos Eléctricos -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-lg hover:bg-primary hover:text-white transition duration-300 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-flashlight-fill ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Cercos Eléctricos</h3>
+                    <p class="text-gray-600 hover:text-white transition duration-300">Sistemas perimetrales de alta disuasión, certificados bajo la normativa SEC para máxima seguridad en bordes.</p>
+                </div>
+                <!-- Servicio 3: Citofonía -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-lg hover:bg-primary hover:text-white transition duration-300 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-phone-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Citofonía Análoga y Digital</h3>
+                    <p class="text-gray-600 hover:text-white transition duration-300">Comunicación clara y eficiente para conserjerías, departamentos y oficinas, con control total de accesos.</p>
+                </div>
+                <!-- Servicio 4: Detección de Incendios -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-lg hover:bg-primary hover:text-white transition duration-300 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-fire-fill ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Detección de Incendios</h3>
+                    <p class="text-gray-600 hover:text-white transition duration-300">Centrales automatizadas y dispositivos certificados: sensores de humo, temperatura, palancas y sirenas.</p>
+                </div>
+                <!-- Servicio 5: Controles de Acceso -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-lg hover:bg-primary hover:text-white transition duration-300 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-door-lock-fill ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Controles de Acceso</h3>
+                    <p class="text-gray-600 hover:text-white transition duration-300">Tecnologías biométricas, lectores de proximidad y sistemas avanzados para residentes y colaboradores.</p>
+                </div>
+                <!-- Servicio 6: Portones Automatizados -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-lg hover:bg-primary hover:text-white transition duration-300 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-garage-door-fill ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Portones Automatizados</h3>
+                    <p class="text-gray-600 hover:text-white transition duration-300">Portones batientes y correderas de alto tráfico y alta velocidad. Marcas: CENTURION, FAAC, BFT, ROGGER, NICE.</p>
+                </div>
+                <!-- Servicio 7: Redes y Conectividad -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-lg hover:bg-primary hover:text-white transition duration-300 border-t-4 border-primary md:col-span-2 lg:col-span-3">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="ri-router-fill ri-2x text-primary"></i>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="text-2xl font-bold mb-3">Redes y Conectividad</h3>
+                            <p class="text-gray-600 hover:text-white transition duration-300">Infraestructura de datos, cableado estructurado, fibra óptica y cumplimiento estricto de la Ley de Ductos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Planes de Mantención CCDD -->
+    <section id="planes" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-primary text-white px-4 py-1 rounded-full text-sm font-bold mb-4">ESPECIAL PARA CONDOMINIOS</span>
+                <h2 class="text-4xl font-black text-gray-900 mb-4">Planes Anuales de Mantención para CCDD</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Sabemos que la prevención es clave. Ofrecemos planes anuales diseñados para asegurar el óptimo funcionamiento de sus sistemas durante todo el año.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Beneficios del Plan -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-primary/20 shadow-sm">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Con un pago mensual incluye:</h3>
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="ri-check-line text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Mantenciones preventivas mensuales</h4>
+                                <p class="text-gray-600 text-sm">Revisión y ajuste de todos los sistemas según plan establecido para prevenir fallas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="ri-check-line text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Visitas de emergencias</h4>
+                                <p class="text-gray-600 text-sm">Atención prioritaria ante cualquier falla o imprevisto, sin costo adicional dentro del plan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="ri-check-line text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Informe técnico y respaldo</h4>
+                                <p class="text-gray-600 text-sm">Reportes de cada visita y respaldo de intervenciones realizadas para mayor transparencia.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="ri-check-line text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Descuentos preferenciales</h4>
+                                <p class="text-gray-600 text-sm">En repuestos, upgrades y proyectos adicionales.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="ri-check-line text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Asesoría permanente</h4>
+                                <p class="text-gray-600 text-sm">Acompañamiento y soporte técnico durante todo el año.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA del Plan -->
+                <div class="text-center lg:text-left">
+                    <div class="bg-primary text-white p-8 rounded-2xl shadow-2xl">
+                        <div class="flex items-center justify-center lg:justify-start gap-3 mb-6">
+                            <i class="ri-shield-check-fill ri-3x"></i>
+                            <h3 class="text-2xl md:text-3xl font-black">TRANQUILIDAD, SEGURIDAD Y AHORRO TODO EL AÑO</h3>
+                        </div>
+                        <p class="text-white/90 mb-8 text-lg">Proteja su condominio con un plan de mantención profesional. Evite fallas costosas y garantice la seguridad de sus residentes.</p>
+                        <a href="#contacto" class="inline-block bg-white text-primary px-8 py-4 rounded-button font-bold text-lg hover:bg-gray-100 transition duration-200 shadow-lg">
+                            Solicitar Cotización del Plan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Diagnóstico Gratuito -->
+    <section id="diagnostico" class="py-20 bg-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block bg-primary text-white px-4 py-1 rounded-full text-sm font-bold mb-4">SIN COSTO</span>
+                    <h2 class="text-3xl md:text-4xl font-black mb-6">Diagnóstico Técnico Gratuito en Terreno</h2>
+                    <p class="text-gray-300 text-lg mb-8">Realizamos levantamientos y visitas técnicas sin costo, para diseñar la mejor solución a la medida de su comunidad.</p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="ri-checkbox-circle-fill text-primary"></i>
+                            <span class="text-gray-300">Evaluación completa de sus sistemas actuales</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="ri-checkbox-circle-fill text-primary"></i>
+                            <span class="text-gray-300">Propuesta técnica personalizada</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="ri-checkbox-circle-fill text-primary"></i>
+                            <span class="text-gray-300">Sin compromiso de contratación</span>
+                        </div>
+                    </div>
+                    <a href="#contacto" class="inline-block bg-primary text-white px-8 py-4 rounded-button font-bold text-lg hover:bg-secondary transition duration-200 shadow-xl">
+                        Agendar Diagnóstico Gratis
+                    </a>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl border-l-4 border-primary">
+                    <h3 class="text-2xl font-bold mb-4">¿Cómo funciona?</h3>
+                    <ol class="space-y-3 text-gray-300">
+                        <li class="flex gap-3"><span class="font-bold text-primary">1.</span><span>Nos contactas por formulario o WhatsApp</span></li>
+                        <li class="flex gap-3"><span class="font-bold text-primary">2.</span><span>Coordinamos una visita técnica a tu condominio</span></li>
+                        <li class="flex gap-3"><span class="font-bold text-primary">3.</span><span>Evaluamos tus sistemas y necesidades</span></li>
+                        <li class="flex gap-3"><span class="font-bold text-primary">4.</span><span>Te entregamos un informe y propuesta sin costo</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Lo Que Dicen Nuestros Clientes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">La satisfacción de nuestros clientes es nuestra mejor carta de presentación.</p>
+            </div>
+            <div class="testimonial-slider max-w-4xl mx-auto relative">
+                <div class="testimonial-slide active bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gray-300 rounded-full overflow-hidden mr-4">
+                            <img src="./assets/img/cliente1.jpg" alt="Carlos Rodríguez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">Carlos Rodríguez</h4>
+                            <p class="text-gray-600">Gerente General, Distribuidora Méndez</p>
+                            <div class="flex mt-1">
+                                <i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Después de sufrir un robo en nuestro almacén, contratamos a SEGURPRO para instalar un sistema completo de seguridad. La calidad del servicio y la atención personalizada fueron excepcionales."</p>
+                </div>
+                <div class="testimonial-slide bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gray-300 rounded-full overflow-hidden mr-4">
+                            <img src="./assets/img/cliente2.jpg" alt="Laura Martínez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">Laura Martínez</h4>
+                            <p class="text-gray-600">Administradora, Residencial Los Pinos</p>
+                            <div class="flex mt-1">
+                                <i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Implementamos el sistema de control de acceso en nuestro condominio y ha sido una inversión excelente. La instalación fue rápida y profesional, y el soporte técnico siempre está disponible."</p>
+                </div>
+                <div class="testimonial-slide bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gray-300 rounded-full overflow-hidden mr-4">
+                            <img src="./assets/img/cliente3.jpg" alt="Miguel Sánchez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">Miguel Sánchez</h4>
+                            <p class="text-gray-600">Director, Colegio San Francisco</p>
+                            <div class="flex mt-1">
+                                <i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i><i class="ri-star-fill text-yellow-500"></i><i class="ri-star-half-fill text-yellow-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"La seguridad de nuestros estudiantes es nuestra prioridad. SEGURPRO diseñó un sistema integral que incluye cámaras, control de acceso y alarmas para nuestro campus."</p>
+                </div>
+                <div class="flex justify-center mt-8">
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-primary mx-1" data-slide="0"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 mx-1" data-slide="1"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 mx-1" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm">Contáctanos</span>
+                <h2 class="text-4xl font-black mb-4 mt-2">Hablemos de tu proyecto de seguridad</h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">Estamos listos para ayudarle a diseñar la solución de seguridad perfecta para sus necesidades.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Info Contacto -->
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm mb-8">
+                        <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="ri-user-line ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Francis Cartagena N.</h4>
+                                    <p class="text-primary font-medium text-sm">Jefe de Proyectos — SEGURPRO SpA</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="ri-phone-fill ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Teléfono / WhatsApp</h4>
+                                    <p class="text-gray-600"><a href="tel:+56965685556" class="hover:text-primary">+569 6568 5556</a></p>
+                                    <p class="text-gray-600"><a href="tel:+56960007892" class="hover:text-primary">+569 6000 7892</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="ri-mail-fill ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Correo Electrónico</h4>
+                                    <p class="text-gray-600"><a href="mailto:fcartagena@segurpro.cl" class="hover:text-primary">fcartagena@segurpro.cl</a></p>
+                                    <p class="text-gray-600"><a href="mailto:info@segurpro.cl" class="hover:text-primary">info@segurpro.cl</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="ri-map-pin-fill ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-1">Dirección</h4>
+                                    <p class="text-gray-600">Av. Apoquindo 6410 of.605</p>
+                                    <p class="text-gray-600">Las Condes, Santiago, Chile</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-2">Solicita tu diagnóstico gratuito</h3>
+                    <p class="text-gray-600 mb-6 text-sm">Completa el formulario y te contactaremos en menos de 24 horas.</p>
+                    <form id="contact-form" action="/api/contacto" method="POST" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nombre completo *</label>
+                            <input type="text" name="nombre" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico *</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono *</label>
+                                <input type="tel" name="telefono" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Tipo de propiedad</label>
+                            <select name="propiedad" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
+                                <option>Condominio / CCDD</option>
+                                <option>Empresa / Oficina</option>
+                                <option>Casa Particular</option>
+                                <option>Institución / Colegio</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Servicio de interés</label>
+                            <select name="servicio" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white">
+                                <option>Plan de Mantención Anual</option>
+                                <option>Diagnóstico Técnico Gratuito</option>
+                                <option>Sistemas CCTV</option>
+                                <option>Cercos Eléctricos</option>
+                                <option>Citofonía</option>
+                                <option>Detección de Incendios</option>
+                                <option>Controles de Acceso</option>
+                                <option>Portones Automatizados</option>
+                                <option>Redes y Conectividad</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                            <textarea name="mensaje" rows="4" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition" placeholder="Cuéntanos sobre tu proyecto o necesidad..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full bg-primary text-white font-bold py-4 rounded-button hover:bg-secondary transition duration-200 shadow-lg">
+                            Solicitar Diagnóstico Gratuito
+                        </button>
+                        <p id="form-status" class="text-sm text-center mt-2 hidden"></p>
+                        <p class="text-xs text-gray-500 text-center">Al enviar aceptas nuestra política de privacidad. Sin spam.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="inline-block mb-6">
+                        <img src="./assets/img/Segurpro2026.png" alt="SEGURPRO Logo" class="h-12">
+                    </a>
+                    <p class="text-gray-400 mb-6">Soluciones de seguridad electrónica profesionales para condominios, empresas e instituciones. Más de 15 años protegiendo lo que más valora.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://web.facebook.com/segurpro" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition duration-200"><i class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/segurprospa/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition duration-200"><i class="ri-instagram-fill"></i></a>
+                        <a href="https://www.segurpro.cl" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition duration-200"><i class="ri-global-fill"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-200">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-200">Servicios</a></li>
+                        <li><a href="#planes" class="text-gray-400 hover:text-white transition duration-200">Planes CCDD</a></li>
+                        <li><a href="#diagnostico" class="text-gray-400 hover:text-white transition duration-200">Diagnóstico Gratis</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-white transition duration-200">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-200">Sistemas CCTV</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-200">Cercos Eléctricos</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-200">Citofonía</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-200">Detección de Incendios</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-200">Controles de Acceso</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-200">Portones Automatizados</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-200">Redes y Conectividad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Certificaciones</h4>
+                    <div class="space-y-3 text-gray-400">
+                        <p class="flex items-center gap-2"><i class="ri-shield-check-fill text-primary"></i> Normativa SEC</p>
+                        <p class="flex items-center gap-2"><i class="ri-shield-check-fill text-primary"></i> Ley de Ductos</p>
+                        <p class="flex items-center gap-2"><i class="ri-shield-check-fill text-primary"></i> Personal Certificado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-500">
+                <p class="font-bold text-white mb-2">PROTEGEMOS TU PRESENTE, ASEGURAMOS TU FUTURO.</p>
+                <p>&copy; 2026 SEGURPRO SpA. Todos los derechos reservados. <a href="#" class="text-gray-400 hover:text-white">Política de Privacidad</a> | <a href="#" class="text-gray-400 hover:text-white">Términos y Condiciones</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/56965685556" target="_blank" class="fixed bottom-6 right-6 w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 hover:scale-110 transition duration-300 z-40">
+        <i class="ri-whatsapp-fill ri-2x"></i>
+    </a>
+
+</body>
+
+</html>
